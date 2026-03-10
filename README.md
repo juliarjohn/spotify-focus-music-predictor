@@ -3,11 +3,11 @@
 ## Overview
 This project explores whether certain Spotify audio features are associated with music that may be better suited for focus or studying.
 
-Using a dataset of Spotify track audio features, the analysis examines characteristics such as acousticness, instrumentalness, energy, speechiness, and tempo. A simple focus score heuristic is created to estimate how suitable a song may be for focus environments.
+Using a dataset of Spotify track audio features, the analysis examines characteristics such as acousticness, instrumentalness, energy, speechiness, and tempo. A simple focus score experimental formula is created to estimate how suitable a song may be for focus environments.
 
 ## Technologies
 - Python
-- pandas
+- Pandas
 - NumPy
 - Matplotlib
 - Jupyter Notebook
@@ -20,16 +20,16 @@ This project uses a Spotify tracks dataset containing metadata and audio feature
 - Removed unnecessary index columns
 - Explored feature distributions and summary statistics
 - Computed a correlation matrix and heatmap
-- Built a simple focus score heuristic using acousticness, instrumentalness, energy, and speechiness
+- Built a simple focus score formula using acousticness, instrumentalness, energy, and speechiness
 - Compared high-scoring and low-scoring tracks
 - Ranked tracks using the calculated focus score
 
 ## Concepts Demonstrated
 
-- Data cleaning using pandas
+- Data cleaning using Pandas
 - Exploratory Data Analysis (EDA)
 - Correlation analysis
-- Feature engineering using a heuristic score
+- Feature engineering using a experimental formula-based score
 - Data visualization with Matplotlib
 
 ## Key Findings
@@ -50,7 +50,7 @@ This project uses a Spotify tracks dataset containing metadata and audio feature
 ![High vs Low Focus Features](images/high_vs_low_focus_features.png)
 
 ## Limitations
-The focus score is a simple heuristic based on selected audio features. It does not account for listener preference, lyrical meaning, personal study habits, or whether a track is music versus ambient or white-noise audio.
+The focus score is a simple experimental formula based on selected audio features. It does not account for listener preference, lyrical meaning, personal study habits, or whether a track is music versus ambient or white-noise audio.
 
 The goal of the model is to explore how audio feature data can be combined to approximate a focus-oriented listening profile, not to create a definitive recommendation system.
 
