@@ -26,11 +26,11 @@ This project uses a Spotify tracks dataset containing metadata and audio feature
 
 ## Concepts Demonstrated
 
-• Data cleaning using pandas
-• Exploratory Data Analysis (EDA)
-• Correlation analysis
-• Feature engineering using a heuristic score
-• Data visualization with matplotlib
+- Data cleaning using pandas
+- Exploratory Data Analysis (EDA)
+- Correlation analysis
+- Feature engineering using a heuristic score
+- Data visualization with Matplotlib
 
 ## Key Findings
 - Tracks ranked highly by the focus score tended to be highly acoustic and strongly instrumental
