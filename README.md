@@ -5,7 +5,7 @@ This project explores whether certain Spotify audio features are associated with
 
 Using a dataset of Spotify track audio features, the analysis examines characteristics such as acousticness, instrumentalness, energy, speechiness, and tempo. A simple focus score heuristic is created to estimate how suitable a song may be for focus environments.
 
-## Tools Used
+## Technologies
 - Python
 - pandas
 - NumPy
@@ -23,6 +23,14 @@ This project uses a Spotify tracks dataset containing metadata and audio feature
 - Built a simple focus score heuristic using acousticness, instrumentalness, energy, and speechiness
 - Compared high-scoring and low-scoring tracks
 - Ranked tracks using the calculated focus score
+
+## Concepts Demonstrated
+
+• Data cleaning using pandas
+• Exploratory Data Analysis (EDA)
+• Correlation analysis
+• Feature engineering using a heuristic score
+• Data visualization with matplotlib
 
 ## Key Findings
 - Tracks ranked highly by the focus score tended to be highly acoustic and strongly instrumental
@@ -48,4 +56,4 @@ The goal of the model is to explore how audio feature data can be combined to ap
 ## Files
 - `spotify_focus_music_analyzer.ipynb` — main notebook
 - `data/spotify_tracks.csv` — dataset
-- `images/` — saved visualizations
+
