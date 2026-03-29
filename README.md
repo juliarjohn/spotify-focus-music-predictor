@@ -8,6 +8,8 @@ It combines a data analysis workflow with a machine learning model and a simple 
 
 ## Demo
 
+![App Screenshot](images/app_screenshot.png)
+
 The app allows users to input audio features such as acousticness, instrumentalness, tempo, and loudness, and returns:
 
 - A prediction (focus-friendly or not)
