@@ -1,61 +1,96 @@
-# Spotify Focus Music Analyzer
+# Spotify Focus Music Predictor
 
-## Overview
-This project explores whether certain Spotify audio features are associated with music that may be better suited for focus or studying.
+This project predicts whether a song is likely to be **focus-friendly** based on its Spotify audio features.
 
-Using a dataset of Spotify track audio features, the analysis examines characteristics such as acousticness, instrumentalness, energy, speechiness, and tempo. A simple focus score experimental formula is created to estimate how suitable a song may be for focus environments.
+It combines a data analysis workflow with a machine learning model and a simple interactive web app built using Streamlit.
 
-## Technologies
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Jupyter Notebook
+---
 
-## Dataset
-This project uses a Spotify tracks dataset containing metadata and audio features for approximately 114,000 tracks.
+## Demo
 
-## Project Workflow
-- Loaded and previewed the dataset
-- Removed unnecessary index columns
-- Explored feature distributions and summary statistics
-- Computed a correlation matrix and heatmap
-- Built a simple focus score formula using acousticness, instrumentalness, energy, and speechiness
-- Compared high-scoring and low-scoring tracks
-- Ranked tracks using the calculated focus score
+The app allows users to input audio features such as acousticness, instrumentalness, tempo, and loudness, and returns:
 
-## Concepts Demonstrated
+- A prediction (focus-friendly or not)
+- A probability score representing model confidence
+- A visual confidence bar
 
-- Data cleaning using Pandas
-- Exploratory Data Analysis (EDA)
-- Correlation analysis
-- Feature engineering using a experimental formula-based score
-- Data visualization with Matplotlib
+---
 
-## Key Findings
-- Tracks ranked highly by the focus score tended to be highly acoustic and strongly instrumental
-- High-scoring tracks had much lower energy and speechiness than low-scoring tracks
-- Acousticness and energy showed a clear inverse relationship in the dataset
-- High-scoring tracks also tended to have slower or more moderate tempos
+## Features
 
-## Visualizations
+- Interactive UI using Streamlit
+- Logistic Regression model for classification
+- Real-time predictions based on user input
+- Probability output using `predict_proba()`
+- Clean and simple user interface
 
-### Correlation Heatmap
-![Correlation Heatmap](images/correlation_heatmap.png)
+---
 
-### Acousticness vs Energy
-![Acousticness vs Energy](images/acousticness_vs_energy.png)
+## How It Works
 
-### High vs Low Focus Features
-![High vs Low Focus Features](images/high_vs_low_focus_features.png)
+1. A dataset of Spotify audio features was analyzed and cleaned.
+2. Relevant features were selected:
+   - acousticness  
+   - instrumentalness  
+   - danceability  
+   - valence  
+   - tempo  
+   - loudness  
+3. A Logistic Regression model was trained to classify tracks as focus-friendly or not.
+4. The trained model was saved using `joblib`.
+5. The model is loaded into a Streamlit app for real-time predictions.
 
-## Limitations
-The focus score is a simple experimental formula based on selected audio features. It does not account for listener preference, lyrical meaning, personal study habits, or whether a track is music versus ambient or white-noise audio.
+---
 
-The goal of the model is to explore how audio feature data can be combined to approximate a focus-oriented listening profile, not to create a definitive recommendation system.
+## Tech Stack
 
-## Files
-- `spotify_focus_music_analyzer.ipynb` — main notebook
-- `data/spotify_tracks.csv` — dataset
-- `images/` — saved visualizations
+- Python  
+- Pandas  
+- NumPy  
+- Scikit-learn  
+- Streamlit  
+- Joblib  
+
+---
+
+## How to Run Locally
+
+1. Clone the repository:
+```bash
+git clone https://github.com/juliarjohn/spotify-focus-music-predictor.git
+cd spotify-focus-music-predictor
+```
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+3. Run the app:
+```bash
+streamlit run app.py
+```
+---
+
+## Notes
+
+- The probability output represents model confidence, not a guaranteed outcome.
+- - The model is based only on audio features and does not account for personal listening preferences or context.
+
+---
+
+## Future Improvements
+
+- Improve model calibration for more reliable probability estimates  
+- Experiment with additional models (e.g., Random Forest, Gradient Boosting)  
+- Add more features such as energy or liveness
+- Deploy the app for public access
+
+---
+
+## Project Goal
+
+This project was built to practice:
+- data analysis
+- feature selection
+- machine learning modeling
+- deploying models in an interactive application
 
