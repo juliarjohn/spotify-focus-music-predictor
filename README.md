@@ -73,7 +73,7 @@ streamlit run app.py
 ## Notes
 
 - The probability output represents model confidence, not a guaranteed outcome.
-- - The model is based only on audio features and does not account for personal listening preferences or context.
+- The model is based only on audio features and does not account for personal listening preferences or context.
 
 ---
 
